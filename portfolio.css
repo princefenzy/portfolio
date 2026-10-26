@@ -1,0 +1,319 @@
+:root {
+    --green-dark: #054a43;
+    --green-nav: #4f7f79;
+    --teal: #1f6f66;
+    --ink: #111;
+    --muted: #555;
+    --lavender: #eef0f7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    color: var(--ink);
+    background: #fff;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* ================= NAVBAR ================= */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 6%;
+    background: var(--green-nav);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+.navlinks {
+    display: flex;
+    gap: 34px;
+}
+
+.navlinks a {
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+.navlinks a:hover { opacity: 1; text-decoration: underline; }
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1.5px solid #fff;
+    border-radius: 999px;
+    padding: 9px 22px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.btn-outline svg { width: 13px; height: 13px; }
+.btn-outline:hover { background: #fff; color: var(--green-nav); }
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    background: var(--green-dark);
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    padding: 80px 6% 220px;
+    overflow: hidden;
+}
+
+.hello {
+    font-size: clamp(28px, 3.2vw, 44px);
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #fff;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 5vw, 72px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.hero-desc {
+    max-width: 340px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d6e4e1;
+    margin-bottom: 30px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.btn-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0b0b0b;
+    color: #fff;
+    border-radius: 999px;
+    padding: 13px 26px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.btn-dark:hover { background: #222; }
+.btn-dark.small { padding: 10px 20px; font-size: 10px; }
+.btn-dark svg { width: 12px; height: 12px; }
+
+.hero-note {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #3ddc97;
+    display: inline-block;
+}
+
+.hero-photo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.photo-circle {
+    position: relative;
+    width: clamp(260px, 36vw, 520px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #2b7c72, #0b3d37);
+    display: grid;
+    place-items: center;
+}
+
+.photo-initial {
+    font-size: clamp(80px, 12vw, 180px);
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.photo-circle img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    left: 6%;
+    bottom: 12%;
+    background: #fff;
+    color: #000;
+    border-radius: 22px;
+    padding: 14px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    max-width: 120px;
+}
+
+.badge strong { font-size: 30px; font-weight: 800; line-height: 1; }
+.badge span { font-size: 11px; font-weight: 700; line-height: 1.25; margin-top: 4px; }
+
+.wave {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: clamp(120px, 15vw, 220px);
+    display: block;
+}
+
+/* ================= ABOUT ================= */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    padding: 20px 6% 90px;
+}
+
+.about h2 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.tagline {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 40px;
+}
+
+.about-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 60px;
+}
+
+.socials { display: flex; gap: 8px; }
+
+.social {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.social svg { width: 14px; height: 14px; }
+.tw { background: #1da1f2; }
+.ig { background: linear-gradient(45deg, #f9a03c, #e1306c, #833ab4); }
+.fb { background: #1877f2; }
+
+.info { max-width: 460px; }
+
+.info li {
+    display: flex;
+    align-items: center;
+    padding: 12px 22px;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.info li.pill {
+    border: 1.5px solid #c9ccd9;
+    border-radius: 999px;
+    background: #fafbff;
+}
+
+.info li span { width: 38%; font-weight: 600; color: #333; }
+.info li b { font-weight: 700; }
+
+.about-text {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #222;
+    max-width: 520px;
+    margin-bottom: 20px;
+    margin-top: 34px;
+}
+
+.signature {
+    font-family: "Mr Dafoe", cursive;
+    font-size: 54px;
+    line-height: 1;
+    margin-left: 40px;
+    margin-bottom: 50px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    max-width: 480px;
+}
+
+.stat {
+    border: 2px solid #6fa49d;
+    border-left-width: 4px;
+    border-bottom-width: 6px;
+    border-color: #2f7b72;
+    border-radius: 16px;
+    padding: 24px 10px;
+    text-align: center;
+    background: #fff;
+}
+
+.stat strong {
+    display: block;
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.stat span { font-size: 11px; font-weight: 600; }
+
+/* ================= MOBILE ================= */
+@media (max-width: 860px) {
+    .navlinks { display: none; }
+    .hero { grid-template-columns: 1fr; padding-bottom: 160px; text-align: left; }
+    .about { grid-template-columns: 1fr; gap: 30px; }
+    .signature { margin-left: 0; }
+}
